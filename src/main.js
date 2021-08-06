@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import installElementPlus from './plugins/element'
+import './plugins/element'
 
 Vue.config.productionTip = false
 
