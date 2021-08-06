@@ -20,5 +20,15 @@ yarn build
 yarn lint
 ```
 
+### Install a package
+```
+yarn add
+```
+
+### Uninstall a package
+```
+yarn remove
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
