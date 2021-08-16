@@ -2,6 +2,8 @@ import axios from 'axios'
 import {
   BASE_URL
 } from '@/utils/consts.js'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 export function http(config) {
   const instance = axios.create({
@@ -13,6 +15,7 @@ export function http(config) {
 
   instance.interceptors.request.use(config => {
     config.headers.Authorization = window.sessionStorage.getItem('token')
+    NProgress.start()
     console.log('请求开始==> ', config)
     return config
   }, error => {
@@ -22,6 +25,7 @@ export function http(config) {
 
   instance.interceptors.response.use(response => {
     console.log('响应开始==> ', response)
+    NProgress.done()
     return response.data
   }, error => {
     console.log('响应失败==> ', error)
