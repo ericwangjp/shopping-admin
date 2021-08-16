@@ -194,7 +194,7 @@
 </template>
 
 <script>
-import { http } from '@/network/http'
+import { http } from '@/utils/http'
 
 export default {
   name: 'Users',

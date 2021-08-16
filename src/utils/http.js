@@ -1,9 +1,13 @@
 import axios from 'axios'
+import {
+  BASE_URL
+} from '@/utils/consts.js'
 
-export function http (config) {
+export function http(config) {
   const instance = axios.create({
     // baseURL: 'https://www.liulongbin.top:8888/api/private/v1/',
-    baseURL: 'http://shop.qwq3.top:8889/api/private/v1/',
+    // baseURL: 'http://shop.qwq3.top:8889/api/private/v1/',
+    baseURL: BASE_URL,
     timeout: 15000
   })
 
